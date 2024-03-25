@@ -14,14 +14,15 @@ export default function PokemonImage({
 }) {
   return (
     <Image
+      data-loaded={false}
       alt={"Picture of " + name}
       src={image}
       priority
       height={size}
       width={size}
-      className="opacity-0 transition-opacity duration-300"
+      className="data-[loaded=false]:animate-pulse data-[loaded=false]:bg-gray-100/10"
       onLoad={(event) =>
-        (event.target as HTMLImageElement).classList.remove("opacity-0")
+        (event.target as HTMLImageElement).setAttribute("data-loaded", "true")
       }
     />
   );
