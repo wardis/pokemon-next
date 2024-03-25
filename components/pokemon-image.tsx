@@ -19,7 +19,7 @@ export default function PokemonImage({
       priority
       height={size}
       width={size}
-      className="duration-[1s] opacity-0 transition-opacity"
+      className="opacity-0 transition-opacity duration-300"
       onLoad={(event) =>
         (event.target as HTMLImageElement).classList.remove("opacity-0")
       }
