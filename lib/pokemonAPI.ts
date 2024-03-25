@@ -9,7 +9,7 @@ export async function getPokemonList(): Promise<Pokemon[]> {
   return data.results;
 }
 
-export async function getPokemonByName(name: string) {
+export async function getPokemonByName(name: string): Promise<Pokemon> {
   const response = await fetch(`${API_URL}/${name}`);
   return response.json();
 }
