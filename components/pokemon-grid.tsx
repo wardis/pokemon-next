@@ -41,7 +41,7 @@ export default function PokemonGrid({
           </span>
         </div>
       </div>
-      <div className="my-4 grid-cols-2 gap-4 sm:grid lg:grid-cols-4">
+      <div className="my-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {filteredPokemons.map((pokemon) => (
           <Link key={pokemon.name} href={`/${pokemon.name}`}>
             <div className="flex flex-col items-center overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-800">
