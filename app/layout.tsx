@@ -38,7 +38,7 @@ export default function RootLayout({
             </Link>
             <ModeToggle />
           </header>
-          <main className="container">{children}</main>
+          <main className="container min-h-screen">{children}</main>
           <footer className="text-center">Pokedex Inc &copy; 2024</footer>
         </ThemeProvider>
       </body>
