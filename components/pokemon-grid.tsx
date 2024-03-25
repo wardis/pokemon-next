@@ -8,6 +8,8 @@ import { PokemonPreview } from "@/types/pokemon";
 
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
+import Image from "next/image";
+import PokemonImage from "./pokemon-image";
 
 export default function PokemonGrid({
   pokemons,
@@ -42,8 +44,15 @@ export default function PokemonGrid({
       <div className="my-4 grid-cols-2 gap-4 sm:grid lg:grid-cols-4">
         {filteredPokemons.map((pokemon) => (
           <Link key={pokemon.name} href={`/${pokemon.name}`}>
-            <div className="w-full bg-slate-200 text-center dark:bg-slate-900">
-              <p className="py-2 text-xl capitalize">{pokemon.name}</p>
+            <div className="flex flex-col items-center overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-800">
+              <PokemonImage
+                image={pokemon.image}
+                name={pokemon.name}
+                size={96}
+              />
+              <div className="w-full bg-slate-200 text-center dark:bg-slate-900">
+                <p className="py-2 text-xl capitalize">{pokemon.name}</p>
+              </div>
             </div>
           </Link>
         ))}
