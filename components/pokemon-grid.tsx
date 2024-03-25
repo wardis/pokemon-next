@@ -4,12 +4,16 @@ import Link from "next/link";
 import { useState } from "react";
 import { BiSearch } from "react-icons/bi";
 
-import { Pokemon } from "@/types/pokemon";
+import { PokemonPreview } from "@/types/pokemon";
 
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 
-export default function PokemonGrid({ pokemons }: { pokemons: Pokemon[] }) {
+export default function PokemonGrid({
+  pokemons,
+}: {
+  pokemons: PokemonPreview[];
+}) {
   const [searchText, setSearchText] = useState("");
 
   const filteredPokemons = pokemons.filter((pokemon) =>

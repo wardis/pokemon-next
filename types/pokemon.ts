@@ -6,3 +6,8 @@ export type Pokemon = {
   moves: { move: { name: string; url: string } }[];
   [k: string]: any;
 };
+
+export type PokemonPreview = {
+  name: string;
+  image: string;
+};

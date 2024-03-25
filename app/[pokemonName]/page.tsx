@@ -1,10 +1,11 @@
+import { LiaRulerVerticalSolid } from "react-icons/lia";
+import { TbWeight } from "react-icons/tb";
+
 import PokemonImage from "@/components/pokemon-image";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { getPokemonByName } from "@/lib/pokemonAPI";
-import { LiaRulerVerticalSolid } from "react-icons/lia";
-import { TbWeight } from "react-icons/tb";
 
 const TYPE_COLOR_MAP = {
   normal: "#A8A878",
