@@ -127,7 +127,11 @@ export default async function PokemonPage({
                     }
                   </p>
                   <p>{stat.base_stat}</p>
-                  <Progress value={stat["base_stat"]} className="h-2" />
+                  <Progress
+                    value={stat["base_stat"]}
+                    className="h-2"
+                    color={color}
+                  />
                 </div>
               ))}
             </div>
