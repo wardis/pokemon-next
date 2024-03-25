@@ -8,3 +8,8 @@ export async function getPokemonList(): Promise<Pokemon[]> {
   const data = await response.json();
   return data.results;
 }
+
+export async function getPokemonByName(name: string) {
+  const response = await fetch(`${API_URL}/${name}`);
+  return response.json();
+}
