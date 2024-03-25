@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import Link from "next/link";
+import { TbPokeball } from "react-icons/tb";
+
 import ThemeProvider from "@/components/theme-provider";
 import { ModeToggle } from "@/components/mode-toggle";
+
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,8 +29,17 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ModeToggle />
-          {children}
+          <header className=" container flex items-center justify-between py-4">
+            <Link href="/">
+              <div className="text-bold flex items-center gap-2 text-2xl">
+                <TbPokeball />
+                Pokedex
+              </div>
+            </Link>
+            <ModeToggle />
+          </header>
+          <main className="container">{children}</main>
+          <footer className="text-center">Pokedex Inc &copy; 2024</footer>
         </ThemeProvider>
       </body>
     </html>
